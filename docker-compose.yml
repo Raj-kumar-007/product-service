@@ -5,8 +5,8 @@ services:
     ports:
       - "27017:27017"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: password
+#      MONGO_INITDB_ROOT_USERNAME: admin
+#      MONGO_INITDB_ROOT_PASSWORD: password
       MONGO_INITDB_DATABASE: products
     volumes:
       - mongo-data:/data/db
@@ -16,7 +16,7 @@ volumes:
 
 
 
-
+# if you want to make docker file for springboot app as well
 #  springboot-app:
 #    image: product-service:latest
 #    container_name: product-service-app

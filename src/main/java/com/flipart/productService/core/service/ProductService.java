@@ -34,4 +34,9 @@ public class ProductService {
     public UUID insertProduct(CreateProductRequest createProductRequest) {
         return productDao.insert(productMapper.mapToProduct(createProductRequest)).getId();
     }
+
+    public void delete(UUID productId) {
+        var product = getProduct(productId);
+        productDao.delete(product);
+    }
 }
